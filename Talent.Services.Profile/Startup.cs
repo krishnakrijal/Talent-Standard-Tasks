@@ -48,6 +48,8 @@ namespace Talent.Services.Profile
                     .AllowCredentials();
                 });
             });
+
+
             services.Configure<FormOptions>(x =>
             {
                 x.ValueLengthLimit = int.MaxValue;
@@ -88,8 +90,10 @@ namespace Talent.Services.Profile
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseCors("AllowWebAppAccess");
             app.UseMvc();
+            
         }
     }
 }
